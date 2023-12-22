@@ -1,0 +1,562 @@
+2023-12-19 11:24:27 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 11:24:27 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 11:24:27 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 11:24:27 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 11:24:28 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 11:24:28 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 3880 ms
+2023-12-19 11:24:29 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 11:24:29 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 11:24:43 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 11:24:43 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 11:24:43 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-19 11:24:52 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 11:24:53 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 11:48:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 11:48:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 11:48:45 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 11:48:45 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 11:48:46 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 11:48:46 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1337 ms
+2023-12-19 11:48:46 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 11:48:46 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 11:49:18 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 11:49:18 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 11:49:18 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 11:49:28 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 11:51:02 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 11:52:51 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 11:52:51 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 11:52:51 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 11:52:51 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 11:52:51 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 11:52:51 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1373 ms
+2023-12-19 11:52:52 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 11:52:52 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 11:53:16 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 11:53:16 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 11:53:16 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 11:53:16 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 11:53:17 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 11:53:17 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1522 ms
+2023-12-19 11:53:18 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 11:53:18 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 11:53:26 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 11:53:26 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 11:53:26 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 4 ms
+2023-12-19 11:54:04 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 11:55:40 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 12:01:19 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 12:01:19 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 12:01:19 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 12:01:19 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 12:01:20 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 12:01:20 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1602 ms
+2023-12-19 12:01:20 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 12:01:20 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 12:01:27 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 12:01:27 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 12:01:27 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 0 ms
+2023-12-19 12:01:57 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 12:03:36 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 12:06:35 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 12:06:35 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 12:06:35 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 12:06:35 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 12:06:35 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 12:06:35 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1761 ms
+2023-12-19 12:06:36 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 12:06:36 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 12:06:41 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 12:06:41 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 12:06:41 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 12:11:03 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 12:11:03 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 12:11:15 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 12:11:15 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 12:11:15 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 12:11:15 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 12:11:15 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 12:11:15 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1339 ms
+2023-12-19 12:11:16 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 12:11:16 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 12:11:21 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 12:11:21 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 12:11:21 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 12:12:40 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 12:14:19 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 12:18:10 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 12:18:10 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 12:18:10 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 12:18:10 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 12:18:11 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 12:18:11 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1356 ms
+2023-12-19 12:18:12 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 12:18:13 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 12:18:17 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 12:18:17 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 12:18:17 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 5 ms
+2023-12-19 12:18:37 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 12:20:12 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 16:14:17 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 16:14:17 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 16:14:17 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 16:14:17 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 16:14:18 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 16:14:18 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 4631 ms
+2023-12-19 16:14:19 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 16:14:20 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 16:14:48 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 16:14:48 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 16:14:48 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 16:15:21 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 16:16:54 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 16:18:28 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 16:18:28 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 16:18:28 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 16:18:28 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 16:18:28 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 16:18:28 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1636 ms
+2023-12-19 16:18:29 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 16:18:30 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 16:18:30 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 16:18:30 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 16:18:30 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-19 16:20:07 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 16:21:36 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 16:29:54 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 16:29:54 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 16:29:54 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 16:29:54 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 16:29:54 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 16:29:54 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1415 ms
+2023-12-19 16:29:55 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 16:29:55 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 16:30:00 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 16:30:00 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 16:30:00 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 0 ms
+2023-12-19 16:30:08 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 16:31:35 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 17:02:27 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 17:02:27 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 17:02:27 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 17:02:27 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 17:02:27 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 17:02:27 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1737 ms
+2023-12-19 17:02:28 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 17:02:28 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 17:02:37 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 17:02:37 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 17:02:37 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 17:02:48 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 17:04:24 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 17:27:46 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 17:27:46 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 17:27:46 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 17:27:46 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 17:27:46 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 17:27:46 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1449 ms
+2023-12-19 17:27:47 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 17:27:47 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 17:29:22 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 17:29:22 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 17:29:22 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 6 ms
+2023-12-19 17:29:45 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 17:31:20 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 17:51:55 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 17:51:55 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 17:51:55 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 17:51:55 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 17:51:55 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 17:51:55 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1370 ms
+2023-12-19 17:51:56 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 17:51:56 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 17:52:18 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 17:52:18 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 17:52:18 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 17:52:20 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 17:52:20 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 17:58:34 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 17:58:34 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 17:58:34 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 17:58:34 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 17:58:34 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 17:58:34 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1495 ms
+2023-12-19 17:58:35 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 17:58:35 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 17:59:01 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 17:59:01 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 17:59:01 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 17:59:04 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 17:59:05 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 18:16:28 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 18:16:28 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 18:16:28 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 18:16:28 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 18:16:28 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 18:16:28 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1567 ms
+2023-12-19 18:16:30 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 18:16:30 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 18:16:35 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 18:16:35 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 18:16:35 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 18:16:44 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 18:16:44 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 18:25:22 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 18:25:22 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 18:25:22 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 18:25:22 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 18:25:22 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 18:25:22 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1383 ms
+2023-12-19 18:25:24 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 18:25:24 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 18:25:28 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 18:25:28 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 18:25:28 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-19 18:25:32 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 18:25:32 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 18:50:59 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 18:50:59 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 18:50:59 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 18:50:59 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 18:50:59 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 18:50:59 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1491 ms
+2023-12-19 18:51:00 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 18:51:00 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 18:52:29 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 18:52:29 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 18:52:29 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 18:53:02 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 18:54:38 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 19:05:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 19:05:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 19:05:45 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 19:05:45 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 19:05:45 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 19:05:45 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1456 ms
+2023-12-19 19:05:46 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 19:05:46 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 19:06:05 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 19:06:05 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 19:06:05 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-19 19:06:13 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 19:06:13 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 19:34:18 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 19:34:18 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 19:34:18 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 19:34:18 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 19:34:18 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 19:34:18 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1343 ms
+2023-12-19 19:34:19 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 19:34:19 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 19:35:27 INFO  [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 19:35:27 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 19:35:27 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 4 ms
+2023-12-19 19:35:27 INFO  [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 19:35:27 INFO  [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 19:41:11 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 19:41:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 19:41:11 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 19:41:11 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 19:41:12 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 19:41:12 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1410 ms
+2023-12-19 19:41:13 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 19:41:13 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 19:41:21 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 19:41:21 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 19:41:21 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 3 ms
+2023-12-19 19:41:26 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 19:42:48 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-19 19:45:11 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-19 19:45:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-19 19:45:11 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-19 19:45:11 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-19 19:45:11 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-19 19:45:11 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1430 ms
+2023-12-19 19:45:12 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-19 19:45:12 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-19 19:45:15 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-19 19:45:15 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-19 19:45:15 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-19 19:45:15 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-19 19:45:16 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.

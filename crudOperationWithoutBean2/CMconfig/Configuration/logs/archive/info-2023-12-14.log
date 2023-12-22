@@ -1,0 +1,718 @@
+2023-12-14 11:09:22 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 11:09:22 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:09:22 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 11:09:22 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 11:09:22 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 11:09:22 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1607 ms
+2023-12-14 11:09:23 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:09:23 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 11:09:45 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 11:09:45 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 11:09:45 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-14 11:18:22 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 11:18:22 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:18:22 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 11:18:22 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 11:18:22 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 11:18:22 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1374 ms
+2023-12-14 11:18:23 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:18:23 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 11:18:40 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 11:18:40 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 11:18:40 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 3 ms
+2023-12-14 11:20:48 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 11:20:48 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:20:48 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 11:20:48 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 11:20:48 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 11:20:48 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1405 ms
+2023-12-14 11:20:49 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:20:49 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 11:21:15 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 11:21:15 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 11:21:15 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 11:38:37 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 11:38:37 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:38:37 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 11:38:37 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 11:38:37 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 11:38:37 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1424 ms
+2023-12-14 11:38:38 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:38:38 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 11:38:45 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 11:38:45 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 11:38:45 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 11:45:40 INFO  [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-14 11:46:10 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 11:46:10 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:46:10 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 11:46:10 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 11:46:10 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 11:46:10 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1434 ms
+2023-12-14 11:46:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:46:11 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 11:46:15 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 11:46:15 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 11:46:15 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 4 ms
+2023-12-14 11:47:55 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Starting...
+2023-12-14 11:49:26 INFO  [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource -
+				HikariPool-1 - Start completed.
+2023-12-14 11:52:19 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 11:52:19 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:52:19 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 11:52:19 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 11:52:20 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 11:52:20 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1709 ms
+2023-12-14 11:52:21 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 11:52:21 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 11:52:23 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 11:52:23 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 11:52:23 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 12:04:06 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 12:04:06 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:04:06 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 12:04:06 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 12:04:06 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 12:04:06 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1699 ms
+2023-12-14 12:04:07 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:04:07 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 12:05:43 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 12:05:43 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 12:05:43 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 3 ms
+2023-12-14 12:08:35 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 12:08:35 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:08:35 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 12:08:35 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 12:08:35 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 12:08:35 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1398 ms
+2023-12-14 12:08:36 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:08:36 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 12:08:51 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 12:08:51 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 12:08:51 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 4 ms
+2023-12-14 12:11:12 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 12:11:12 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:11:12 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 12:11:12 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 12:11:12 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 12:11:12 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1459 ms
+2023-12-14 12:11:13 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:11:13 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 12:11:16 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 12:11:16 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 12:11:16 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 12:34:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 12:34:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:34:45 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 12:34:45 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 12:34:45 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 12:34:45 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1388 ms
+2023-12-14 12:34:46 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:34:46 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 12:35:09 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 12:35:09 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 12:35:09 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 12:36:17 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 12:36:17 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:36:17 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 12:36:17 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 12:36:17 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 12:36:17 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1329 ms
+2023-12-14 12:36:18 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:36:18 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 12:36:28 INFO  [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 12:36:28 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 12:36:28 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 12:50:09 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 12:50:09 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:50:09 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 12:50:09 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 12:50:09 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 12:50:09 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1469 ms
+2023-12-14 12:50:10 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:50:10 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 12:50:12 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 12:50:12 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 12:50:12 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 12:51:47 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 12:51:47 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:51:47 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 12:51:47 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 12:51:47 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 12:51:47 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1485 ms
+2023-12-14 12:51:48 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 12:51:48 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 12:51:53 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 12:51:53 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 12:51:53 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 3 ms
+2023-12-14 14:22:49 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 14:22:49 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:22:49 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 14:22:49 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 14:22:49 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 14:22:49 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1342 ms
+2023-12-14 14:22:50 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:22:50 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 14:23:06 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 14:23:06 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 14:23:06 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 6 ms
+2023-12-14 14:51:21 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 14:51:21 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:51:21 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 14:51:21 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 14:51:22 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 14:51:22 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1505 ms
+2023-12-14 14:51:23 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:51:23 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:51:23 INFO  [main] o.a.catalina.core.StandardService -
+				Stopping service [Tomcat]
+2023-12-14 14:51:23 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:51:23 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:51:23 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+				
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-12-14 14:51:38 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 14:51:38 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:51:38 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 14:51:38 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 14:51:38 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 14:51:38 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1515 ms
+2023-12-14 14:51:39 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:51:39 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 14:51:46 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 14:51:46 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 14:51:46 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-14 14:57:02 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 14:57:02 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:57:02 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 14:57:02 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 14:57:02 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 14:57:02 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1415 ms
+2023-12-14 14:57:03 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:57:03 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 14:57:06 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 14:57:06 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 14:57:06 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 5 ms
+2023-12-14 14:57:29 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 14:57:29 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:57:29 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 14:57:29 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 14:57:29 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 14:57:29 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1408 ms
+2023-12-14 14:57:30 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 14:57:30 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 14:57:35 INFO  [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 14:57:35 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 14:57:35 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-14 15:05:39 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:05:39 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:05:39 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:05:39 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:05:39 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:05:39 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1400 ms
+2023-12-14 15:05:40 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:05:40 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 15:05:42 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 15:05:42 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 15:05:42 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 15:11:15 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:11:15 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:11:15 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:11:15 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:11:15 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:11:15 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1515 ms
+2023-12-14 15:11:16 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:11:16 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 15:11:21 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 15:11:21 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 15:11:21 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 15:12:10 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:12:10 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:12:10 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:12:10 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:12:10 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:12:10 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1422 ms
+2023-12-14 15:12:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:12:11 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 15:12:13 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 15:12:13 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 15:12:13 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 4 ms
+2023-12-14 15:21:49 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:21:49 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:21:49 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:21:49 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:21:49 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:21:49 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1654 ms
+2023-12-14 15:21:50 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:21:50 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 15:21:52 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 15:21:52 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 15:21:52 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 3 ms
+2023-12-14 15:28:10 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:28:10 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:28:10 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:28:10 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:28:10 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:28:10 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1395 ms
+2023-12-14 15:28:11 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:28:11 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 15:28:31 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 15:28:31 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 15:28:31 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 3 ms
+2023-12-14 15:35:47 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:35:47 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:35:47 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:35:47 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:35:47 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:35:47 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1470 ms
+2023-12-14 15:35:48 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:35:48 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 15:35:51 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 15:35:51 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 15:35:51 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-14 15:48:47 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:48:47 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:48:47 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:48:47 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:48:47 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:48:47 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1324 ms
+2023-12-14 15:48:48 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:48:48 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 15:48:56 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 15:48:56 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 15:48:56 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 15:55:19 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:55:19 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:55:19 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:55:19 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:55:19 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:55:19 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1688 ms
+2023-12-14 15:55:20 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:55:20 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:55:20 INFO  [main] o.a.catalina.core.StandardService -
+				Stopping service [Tomcat]
+2023-12-14 15:55:20 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:55:20 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Destroying ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:55:20 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+				
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-12-14 15:55:28 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 15:55:28 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:55:28 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 15:55:28 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 15:55:28 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 15:55:28 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1500 ms
+2023-12-14 15:55:29 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 15:55:29 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 15:55:32 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 15:55:32 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 15:55:32 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 3 ms
+2023-12-14 17:05:12 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 17:05:12 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 17:05:12 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 17:05:12 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 17:05:12 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 17:05:12 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1752 ms
+2023-12-14 17:05:13 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 17:05:13 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 17:05:22 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 17:05:22 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 17:05:22 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-14 17:34:51 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 17:34:51 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 17:34:51 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 17:34:51 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 17:34:51 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 17:34:51 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1637 ms
+2023-12-14 17:34:52 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 17:34:52 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 17:35:01 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 17:35:01 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 17:35:01 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 2 ms
+2023-12-14 17:37:37 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 17:37:37 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 17:37:37 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 17:37:37 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 17:37:37 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 17:37:37 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1372 ms
+2023-12-14 17:37:38 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 17:37:38 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 17:37:45 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 17:37:45 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 17:37:45 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 17:46:55 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 17:46:55 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 17:46:55 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 17:46:55 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 17:46:56 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 17:46:56 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1378 ms
+2023-12-14 17:46:56 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 17:46:56 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 17:47:01 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 17:47:01 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 17:47:01 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms
+2023-12-14 18:23:44 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8080 (http)
+2023-12-14 18:23:44 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-14 18:23:44 INFO  [main] o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2023-12-14 18:23:44 INFO  [main] o.a.catalina.core.StandardEngine -
+				Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-14 18:23:44 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2023-12-14 18:23:44 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext -
+				Root WebApplicationContext: initialization completed in 1424 ms
+2023-12-14 18:23:45 INFO  [main] o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8080"]
+2023-12-14 18:23:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-14 18:24:00 INFO  [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 18:24:00 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Initializing Servlet 'dispatcherServlet'
+2023-12-14 18:24:00 INFO  [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet -
+				Completed initialization in 1 ms

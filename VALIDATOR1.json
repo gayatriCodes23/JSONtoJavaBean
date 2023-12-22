@@ -1,0 +1,184 @@
+[
+    {
+      "ModuleName": "TRANSACTION_WORKFLOW",
+      "Fields": [
+     
+        {
+          "name": "DEST_MODULE",
+          "type": "text",
+          "primaryKey": true,
+          "validation": {
+            "pattern": "MAN",
+            "maximum": 100
+          }
+        },
+        {
+          "name": "FLOW_NAME",
+          "type": "text",
+          "primaryKey": true,
+          "validation": {
+            "pattern": "MANS",
+            "maximum": 100
+          }
+        },
+        {
+          "name": "DEST_NO",
+          "type": "text",
+          "validation": {
+            "pattern": "N",
+            "maximum": 50
+          }
+        },
+        {
+          "name": "DETAIL_DESCRIPTION",
+          "type": "text",
+          "validation": {
+            "pattern": "ANS",
+            "maximum": 50
+          }
+        },
+        {
+          "name": "LNET_NAME",
+          "type": "text",
+          "validation": {
+            "pattern": "AN",
+            "maximum": 50
+          }
+        },
+        {
+          "name": "CHANNEL_NAME",
+          "type": "text",
+          "validation": {
+            "pattern": "AN",
+            "maximum": 50
+          }
+        },
+        {
+          "name": "TERM_FIID",
+          "type": "text",
+          "validation": {
+            "pattern": "AN",
+            "maximum": 120
+          }
+        },
+        {
+          "name": "CARD_FIID",
+          "type": "text",
+          "validation": {
+            "pattern": "AN",
+            "maximum": 50
+          }
+        },
+        {
+          "name": "END_POINT_NAME",
+          "type": "text",
+          "validation": {
+            "pattern": "AN",
+            "maximum": 50
+          }
+        },
+        {
+          "name": "OBJECT_NAME",
+          "type": "text",
+          "validation": {
+            "pattern": "ANS",
+            "maximum": 50
+          }
+        }
+      ],
+      "Beans": [
+        { 
+          "BeanName": "FLOW_LEGS",
+          "Fields": [
+            {
+              "name": "FLOW_NAME",
+              "type": "text",
+              "primaryKey": true,
+              "validation": {
+                "pattern": "MANS",
+                "maximum": 100
+              }
+            },
+            {
+              "name": "FLOW_LEG_ID",
+              "primaryKey": true,
+              "type": "text",
+              "validation": {
+                "pattern": "MANS",
+                "maximum": 50
+              }
+            },
+            {
+              "name": "DESCRIPTION",
+              "primaryKey": true,
+              "type": "text",
+              "validation": {
+                "pattern": "AN",
+                "maximum": 120
+              }
+            },
+            {
+              "name": "DEST_MODULE",
+              "type": "text",
+              "primaryKey": true,
+              "validation": {
+                "pattern": "MAN",
+                "maximum": 100
+              }
+            }   ,
+            {
+              "name": "INPUT_FILE",
+              "type": "text",
+              "validation": {
+                "pattern": "AN",
+                "maximum": 120
+              }
+            }, 
+            {
+              "name": "MESSAGE_TYPE",
+              "type": "text",
+              "validation": {
+                "pattern": "AN",
+                "maximum": 120
+              }
+            },
+           
+            {
+              "name": "SOURCE",
+              "type": "text",
+              "validation": {
+                "pattern": "AN",
+                "maximum": 120
+              }
+            },
+            {
+              "name": "DESTINATION",
+              "type": "text",
+              "validation": {
+                "pattern": "AN",
+                "maximum": 120
+              }
+            },
+            {
+              "name": "NETWORK",
+              "type": "text",
+              "validation": {
+                "pattern": "N",
+                "maximum": 50
+              }
+            },
+            {
+              "name": "LEVEL",
+              "type": "text",
+              "validation": {
+                "pattern": "AN",
+                "maximum": 50
+              }
+            }
+            
+          ]
+        }
+      ]
+    }
+  ]
+  
