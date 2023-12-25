@@ -1,0 +1,848 @@
+package com.concerto.crud.common.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.concerto.crud.common.bean.Bean;
+import com.concerto.crud.common.bean.Entity;
+import com.concerto.crud.common.bean.Field;
+import com.concerto.crud.common.bean.Module;
+import com.concerto.crud.common.constant.AppConstant;
+import com.concerto.crud.common.exception.DataSourceException;
+import com.concerto.crud.common.util.JsonToJavaConverter;
+import com.concerto.crud.common.util.Logging;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+/**
+ * Copyright (C) Concerto Software and Systems (P) LTD | All Rights Reserved
+ * 
+ * @File : com.concerto.crud.common.dao.CommonDAOImpl.java
+ * @Author : Suyog Kedar
+ * @AddedDate : October 03, 2023 12:30:40 PM
+ * @Purpose : Implements methods for executing create, update, read, delete, and
+ *          other operations on a specified module in the database. This class
+ *          utilizes JDBC and Spring JDBC Template for database interactions. It
+ *          also handles data insertion into a temporary table for further
+ *          processing.
+ * @Version : 1.0
+ */
+
+@Repository
+public class CommonDAOImpl implements CommonDAO {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	private DataSource dataSource;
+
+	public CommonDAOImpl() {
+		super();
+	}
+
+	@Autowired
+	public CommonDAOImpl(DataSource dataSource) {
+		if (dataSource == null) {
+			throw new DataSourceException(AppConstant.DATASOURCE_NULL);
+		}
+		this.dataSource = dataSource;
+	}
+
+	@Override
+	public Map<String, Object> executeGetData(String fieldName, Object value, Module module) {
+		Map<String, Object> result = new HashMap<>();
+		String tableName = module.getEntityName();
+		List<Field> fields = module.getFields();
+		List<Bean> beans = module.getBeans();
+		String columns = fields.stream().map(Field::getName).collect(Collectors.joining(", "));
+		String tableNameWithSuffix = tableName + AppConstant.MASTER_TABLE_SUFFIX;
+		String selectQuery = String.format(AppConstant.SELECT_QUERY, columns, tableNameWithSuffix, fieldName);
+		try {
+			List<Map<String, Object>> queryResult = jdbcTemplate.queryForList(selectQuery, value);
+			if (!queryResult.isEmpty()) {
+				result = queryResult.get(0);
+				if (beans != null) {
+					for (Bean bean : beans) {
+						String beanName = bean.getEntityName();
+						List<Map<String, Object>> beanresult = executeGetDataBean(fieldName, value, bean);
+						result.put(beanName, beanresult);
+					}
+				}
+			}
+		} catch (Exception e) {
+			Logging.error(AppConstant.FETCH_PROCESS_ERROR, e);
+			result.put(AppConstant.COMMON_MODULE_ERROR, AppConstant.DATA_READING_ERROR);
+		}
+
+		return result;
+	}
+
+	public List<Map<String, Object>> executeGetDataBean(String fieldName, Object value, Bean bean) {
+
+		List<Map<String, Object>> result = new ArrayList<>();
+		String tableName = bean.getEntityName();
+		List<Field> fields = bean.getFields();
+
+		String columns = fields.stream().map(Field::getName).collect(Collectors.joining(", "));
+		String tableNameWithSuffix = tableName + AppConstant.MASTER_TABLE_SUFFIX;
+
+		String selectQuery = String.format(AppConstant.SELECT_QUERY, columns, tableNameWithSuffix, fieldName);
+		try {
+			result = jdbcTemplate.queryForList(selectQuery, value);
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.FETCH_PROCESS_ERROR, e);
+			Map<String, Object> result1 = new HashMap<>();
+			result1.put(AppConstant.COMMON_MODULE_ERROR, AppConstant.DATA_READING_ERROR);
+			result.add(result1);
+		}
+
+		return result;
+	}
+
+	@Override
+	public List<Map<String, Object>> executeGetAllData(Module module) {
+		String tableName = module.getEntityName();
+		List<Bean> beans = module.getBeans();
+		String tableNameWithSuffix = tableName + AppConstant.MASTER_TABLE_SUFFIX;
+		String selectQuery = String.format(AppConstant.SELECT_ALL_QUERY, tableNameWithSuffix);
+		List<Map<String, Object>> response = new ArrayList<>();
+
+		try {
+			List<Map<String, Object>> data = jdbcTemplate.queryForList(selectQuery);
+
+			for (Map<String, Object> iterateData : data) {
+				for (Bean bean : beans) {
+					if (bean != null) {
+						processBeanData(iterateData, bean, response);
+					}
+				}
+			}
+		} catch (Exception e) {
+			Logging.error(AppConstant.FETCH_PROCESS_ERROR, e);
+			Map<String, Object> errorMap = new HashMap<>();
+			errorMap.put(AppConstant.COMMON_MODULE_ERROR, AppConstant.DATA_READING_ERROR);
+			response.add(errorMap);
+		}
+
+		return response;
+	}
+
+	private void processBeanData(Map<String, Object> iterateData, Bean bean, List<Map<String, Object>> response) {
+		String beanTableName = bean.getEntityName() + AppConstant.MASTER_TABLE_SUFFIX;
+		List<Field> fields = bean.getFields();
+		StringBuilder whereClause = new StringBuilder();
+		List<Object> parameterValues = new ArrayList<>();
+
+		for (Field field : fields) {
+			if (field.isPrimaryKey()) {
+				String primaryKeyFieldName = field.getName();
+
+				if (iterateData.containsKey(primaryKeyFieldName)) {
+					Object primaryKeyValue = iterateData.get(primaryKeyFieldName);
+
+					if (primaryKeyValue != null && whereClause.length() > 0) {
+						whereClause.append(AppConstant.AND);
+					}
+
+					whereClause.append(primaryKeyFieldName).append(AppConstant.EQUAL_QUERY_PARAM);
+					parameterValues.add(primaryKeyValue);
+				}
+			}
+		}
+
+		if (whereClause.length() > 0) {
+			Object[] parametersArray = parameterValues.toArray();
+			String selectBeanQuery = String.format(AppConstant.SELECT_QUERY1, beanTableName, whereClause);
+			List<Map<String, Object>> result = jdbcTemplate.queryForList(selectBeanQuery, parametersArray);
+			iterateData.put(bean.getEntityName(), result);
+			response.add(iterateData);
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public boolean addToMaster(Map<String, Object> input, Module module) {
+		boolean response = false;
+		String tableName = module.getEntityName();
+		List<Field> fields = module.getFields();
+		List<Bean> beans = module.getBeans();
+		Map<String, Object> dataMap = (Map<String, Object>) input.get(AppConstant.PARENT_DATA);
+		String setClause = fields.stream().map(Field::getName).collect(Collectors.joining(AppConstant.COMMA));
+
+		String insertQuery = AppConstant.INSERT + tableName + AppConstant.MASTER_TABLE_SUFFIX + AppConstant.OPEN_BRACKET
+				+ setClause + AppConstant.VALUES
+				+ String.join(AppConstant.COMMA, Collections.nCopies(fields.size(), AppConstant.QUERY_PARAM))
+				+ AppConstant.CLOSE_BRACKET;
+
+		try (Connection connection = dataSource.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+			connection.setAutoCommit(false);
+
+			setParameters(preparedStatement, fields, dataMap);
+			int rowsAffected = preparedStatement.executeUpdate();
+
+			if (rowsAffected > 0 && beans != null) {
+				response = processBeans(input, connection, beans);
+				if (response) {
+					connection.commit();
+				} else {
+					connection.rollback();
+				}
+			} else if (rowsAffected > 0 && beans == null) {
+				connection.commit();
+				response = true;
+			} else {
+				connection.rollback();
+			}
+		} catch (Exception e) {
+			Logging.error(AppConstant.ADD_MASTER_PROCESS_ERROR, e);
+			return response;
+		}
+		return response;
+	}
+
+	private int setParameters(PreparedStatement preparedStatement, List<Field> fields, Map<String, Object> dataMap)
+			throws SQLException, JsonProcessingException {
+		int paramIndex = 1;
+		for (Field field : fields) {
+			Object value = dataMap.get(field.getName());
+			if (value instanceof String) {
+				preparedStatement.setString(paramIndex, (String) value);
+			} else if (value instanceof Integer) {
+				preparedStatement.setInt(paramIndex, (Integer) value);
+			} else if (value instanceof Boolean) {
+				preparedStatement.setBoolean(paramIndex, (Boolean) value);
+			} else if (value instanceof Timestamp) {
+				preparedStatement.setTimestamp(paramIndex, (Timestamp) value);
+			} else {
+				ObjectMapper mapper = new ObjectMapper();
+				String mapValue = mapper.writeValueAsString(value);
+				preparedStatement.setString(paramIndex, mapValue);
+			}
+			paramIndex++;
+		}
+		return paramIndex;
+	}
+
+	@SuppressWarnings("unchecked")
+	private boolean processBeans(Map<String, Object> input, Connection connection, List<Bean> beans) {
+		boolean response = false;
+		for (Bean bean : beans) {
+			List<Map<String, Object>> subBeanDataMap = (List<Map<String, Object>>) input.get(AppConstant.BEAN_DATA);
+			if (subBeanDataMap != null) {
+				for (int i = 0; i < subBeanDataMap.size(); i++) {
+					Map<String, Object> beanMap = subBeanDataMap.get(i);
+					boolean result = addToChildMaster(beanMap, bean, connection);
+					if (result) {
+						response = true;
+					}
+				}
+			}
+		}
+		return response;
+	}
+
+	public boolean addToChildMaster(Map<String, Object> input, Bean bean, Connection connection) {
+		boolean response = false;
+		String tableName = bean.getEntityName();
+		List<Field> fields = bean.getFields();
+
+		String setClause = fields.stream().map(Field::getName).collect(Collectors.joining(AppConstant.COMMA));
+
+		String insertQuery = AppConstant.INSERT + tableName + AppConstant.MASTER_TABLE_SUFFIX + AppConstant.OPEN_BRACKET
+				+ setClause + AppConstant.VALUES
+				+ String.join(AppConstant.COMMA, Collections.nCopies(fields.size(), AppConstant.QUERY_PARAM))
+				+ AppConstant.CLOSE_BRACKET;
+
+		try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+			setParameters(preparedStatement, fields, input);
+			int rowsAffected = preparedStatement.executeUpdate();
+			if (rowsAffected > 0) {
+				response = true;
+			}
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.ADD_MASTER_PROCESS_ERROR, e);
+			return response;
+		}
+		return response;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public boolean deleteData(Map<String, Object> input, Module module, String action, String tableSuffix) {
+		boolean response = false;
+		String tableName = module.getEntityName();
+		List<Field> fields = module.getFields();
+//		StringBuilder whereClause = new StringBuilder();
+		List<Object> parameterValues = new ArrayList<>();
+		String whereClause = buildWhereClauseForDeleteData((Map<String, Object>) input.get(AppConstant.PARENT_DATA),
+				module.getFields());
+
+		List<Bean> beans = module.getBeans();
+		Map<String, Object> dataMap = (Map<String, Object>) input.get(AppConstant.PARENT_DATA);
+//		for (Field field : fields) {
+//			if (field.isPrimaryKey()) {
+//				String fieldName = field.getName();
+//				Object value = dataMap.entrySet().stream()
+//						.filter(entry -> entry.getKey().equalsIgnoreCase(fieldName.toLowerCase()))
+//						.map(Map.Entry::getValue).findFirst().orElse(null);
+//
+//				if (value != null && whereClause.length() > 0) {
+//					whereClause.append(AppConstant.AND);
+//				}
+//				whereClause.append(fieldName).append(AppConstant.EQUAL_QUERY_PARAM);
+//				parameterValues.add(value);
+//			}
+//		}
+//		if (whereClause.length() == 0) {
+//			return response;
+//		}
+		if (whereClause == null) {
+			return response;
+		}
+
+		String tableNameWithSuffix = tableName + tableSuffix;
+		String deleteQuery = String.format(AppConstant.DELETE_QUERY, tableNameWithSuffix, whereClause);
+
+		try (Connection connection = dataSource.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+			connection.setAutoCommit(false);
+			for (int i = 0; i < parameterValues.size(); i++) {
+				preparedStatement.setObject(i + 1, parameterValues.get(i));
+			}
+
+			int rowsDeleted = preparedStatement.executeUpdate();
+
+			if (rowsDeleted > 0 && beans != null) {
+				for (Bean bean : beans) {
+					boolean result = false;
+					List<Map<String, Object>> subBeanDataMap = (List<Map<String, Object>>) input
+							.get(AppConstant.BEAN_DATA);
+					if (subBeanDataMap != null) {
+						for (int i = 0; i < subBeanDataMap.size(); i++) {
+							Map<String, Object> beanMap = subBeanDataMap.get(i);
+							result = deleteDataForBean(beanMap, bean, tableSuffix, connection);
+
+						}
+						if (result) {
+							connection.commit();
+							response = true;
+						} else {
+							connection.rollback();
+						}
+					}
+					if (AppConstant.TEMP_TABLE_SUFFIX.equals(tableSuffix) && result) {
+						String request = dataMap.get(AppConstant.REQUEST).toString();
+						result = addToHist(input, module, request, action, connection);
+						if (result) {
+							connection.commit();
+							response = true;
+						} else {
+							connection.rollback();
+						}
+					}
+
+				}
+			} else if (rowsDeleted > 0 && beans == null) {
+				String request = input.get(AppConstant.REQUEST).toString();
+				boolean result = addToHist(input, module, request, action, connection);
+				if (result) {
+					connection.commit();
+					response = true;
+				}
+			} else if (rowsDeleted > 0 && tableSuffix == AppConstant.MASTER_TABLE_SUFFIX) {
+				connection.commit();
+				response = true;
+			} else {
+				connection.rollback();
+			}
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.DELETE_PROCESS_ERROR + tableNameWithSuffix, e);
+			return response;
+		}
+		return response;
+	}
+
+	private String buildWhereClauseForDeleteData(Map<String, Object> dataMap, List<Field> fields) {
+		StringBuilder whereClause = new StringBuilder();
+		List<Object> parameterValues = new ArrayList<>();
+
+		for (Field field : fields) {
+			if (field.isPrimaryKey()) {
+				String fieldName = field.getName();
+				Object value = dataMap.entrySet().stream()
+						.filter(entry -> entry.getKey().equalsIgnoreCase(fieldName.toLowerCase()))
+						.map(Map.Entry::getValue).findFirst().orElse(null);
+
+				if (value != null && whereClause.length() > 0) {
+					whereClause.append(AppConstant.AND);
+				}
+				whereClause.append(fieldName).append(AppConstant.EQUAL_QUERY_PARAM);
+				parameterValues.add(value);
+			}
+		}
+
+		return (whereClause.length() > 0) ? whereClause.toString() : null;
+	}
+
+	public boolean deleteDataForBean(Map<String, Object> input, Bean bean, String tableSuffix, Connection connection) {
+		boolean response = false;
+		String tableName = bean.getEntityName();
+		List<Field> fields = bean.getFields();
+		StringBuilder whereClause = new StringBuilder();
+		List<Object> parameterValues = new ArrayList<>();
+		for (Field field : fields) {
+			if (field.isPrimaryKey()) {
+				String fieldName = field.getName();
+				Object value = input.entrySet().stream()
+						.filter(entry -> entry.getKey().equalsIgnoreCase(fieldName.toLowerCase()))
+						.map(Map.Entry::getValue).findFirst().orElse(null);
+
+				if (value != null && whereClause.length() > 0) {
+					whereClause.append(AppConstant.AND);
+				}
+				whereClause.append(fieldName).append(AppConstant.EQUAL_QUERY_PARAM);
+				parameterValues.add(value);
+			}
+		}
+		if (whereClause.length() == 0) {
+			return response;
+		}
+
+		String tableNameWithSuffix = tableName + tableSuffix;
+		String deleteQuery = String.format(AppConstant.DELETE_QUERY, tableNameWithSuffix, whereClause);
+
+		try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+
+			for (int i = 0; i < parameterValues.size(); i++) {
+				preparedStatement.setObject(i + 1, parameterValues.get(i));
+			}
+			int rowsDeleted = preparedStatement.executeUpdate();
+
+			if (rowsDeleted > 0 && (tableSuffix == AppConstant.TEMP_TABLE_SUFFIX
+					|| tableSuffix == AppConstant.MASTER_TABLE_SUFFIX)) {
+				response = true;
+			}
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.DELETE_PROCESS_ERROR + tableNameWithSuffix, e);
+			return response;
+		}
+
+		return response;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public boolean performUpdate(Map<String, Object> data, Module module) {
+		boolean response = false;
+		boolean primaryKeyAppended = false;
+		List<Field> fields = module.getFields();
+		List<Object> primaryKeyValues = new ArrayList<>();
+		StringBuilder setClause = new StringBuilder();
+		List<Object> setValues = new ArrayList<>();
+		StringBuilder whereClause = new StringBuilder();
+		String tableName = module.getEntityName();
+		List<Bean> beans = module.getBeans();
+		Map<String, Object> dataMap = (Map<String, Object>) data.get(AppConstant.PARENT_DATA);
+
+		for (Field field : fields) {
+			if (field.isPrimaryKey()) {
+				whereClause.append(field.getName()).append(AppConstant.AND_CONDITION);
+				primaryKeyValues.add(dataMap.get(field.getName()));
+				primaryKeyAppended = true;
+			} else {
+				setClause.append(field.getName()).append(AppConstant.APPEND_PARAM);
+				setValues.add(data.get(field.getName()));
+			}
+		}
+
+		setClause.setLength(setClause.length() - 1);
+
+		if (primaryKeyAppended) {
+			whereClause.setLength(whereClause.length() - AppConstant.AND.length());
+		}
+		int count = 0;
+
+		String updateQuery = String.format(AppConstant.UPDATE_QUERY, tableName, AppConstant.MASTER_TABLE_SUFFIX,
+				setClause, whereClause);
+
+		try (Connection connection = dataSource.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
+			connection.setAutoCommit(false);
+			List<Object> allValues = new ArrayList<>();
+			allValues.addAll(setValues);
+			allValues.addAll(primaryKeyValues);
+
+			for (Object value : allValues) {
+				preparedStatement.setObject(count + 1, value);
+				count++;
+			}
+
+			int rowsUpdated = preparedStatement.executeUpdate();
+
+			if (rowsUpdated > 0 && beans != null) {
+				for (Bean bean : beans) {
+					List<Map<String, Object>> subBeanDataMap = (List<Map<String, Object>>) data
+							.get(AppConstant.BEAN_DATA);
+					if (subBeanDataMap != null) {
+						for (int i = 0; i < subBeanDataMap.size(); i++) {
+							Map<String, Object> beanMap = subBeanDataMap.get(i);
+							boolean result = performUpdateForBean(beanMap, bean, connection);
+							if (result) {
+								connection.commit();
+								response = true;
+							} else {
+								connection.rollback();
+							}
+						}
+					}
+				}
+			} else if (rowsUpdated > 0 && beans == null) {
+				connection.commit();
+				response = true;
+			} else {
+				connection.rollback();
+			}
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.UPDATE_PROCESS_ERROR, e);
+			return response;
+
+		}
+		return response;
+	}
+
+	public boolean performUpdateForBean(Map<String, Object> data, Bean bean, Connection connection) {
+
+		boolean response = false;
+		boolean primaryKeyAppended = false;
+		List<Field> fields = bean.getFields();
+		List<Object> primaryKeyValues = new ArrayList<>();
+		StringBuilder setClause = new StringBuilder();
+		List<Object> setValues = new ArrayList<>();
+		StringBuilder whereClause = new StringBuilder();
+		String tableName = bean.getEntityName();
+		for (Field field : fields) {
+			if (field.isPrimaryKey()) {
+				whereClause.append(field.getName()).append(AppConstant.AND_CONDITION);
+				primaryKeyValues.add(data.get(field.getName()));
+				primaryKeyAppended = true;
+			} else {
+				setClause.append(field.getName()).append(AppConstant.APPEND_PARAM);
+				setValues.add(data.get(field.getName()));
+			}
+		}
+
+		setClause.setLength(setClause.length() - 1);
+
+		if (primaryKeyAppended) {
+			whereClause.setLength(whereClause.length() - AppConstant.AND.length());
+		}
+		int count = 0;
+
+		String updateQuery = String.format(AppConstant.UPDATE_QUERY, tableName, AppConstant.MASTER_TABLE_SUFFIX,
+				setClause, whereClause);
+
+		try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
+			List<Object> allValues = new ArrayList<>();
+			allValues.addAll(setValues);
+			allValues.addAll(primaryKeyValues);
+
+			for (Object value : allValues) {
+				preparedStatement.setObject(count + 1, value);
+				count++;
+			}
+
+			int rowsUpdated = preparedStatement.executeUpdate();
+
+			if (rowsUpdated > 0) {
+				response = true;
+			}
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.UPDATE_PROCESS_ERROR, e);
+			return response;
+
+		}
+		return response;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public boolean addToHist(Map<String, Object> input, Module module, String request, String action,
+			Connection connection) {
+		boolean response = false;
+		String tableName = module.getEntityName();
+		List<Field> fields = module.getFields();
+		List<Bean> beans = module.getBeans();
+		String tableNameWithSuffix = tableName + AppConstant.HIST_TABLE_SUFFIX;
+		StringJoiner columnNames = new StringJoiner(AppConstant.COMMA);
+		StringJoiner placeholders = new StringJoiner(AppConstant.COMMA, AppConstant.OPEN_BRACKET,
+				AppConstant.CLOSE_BRACKET);
+		Map<String, Object> dataMap = (Map<String, Object>) input.get(AppConstant.PARENT_DATA);
+		for (int i = 0; i < fields.size(); i++) {
+			Field field = fields.get(i);
+			columnNames.add(field.getName());
+			placeholders.add(AppConstant.QUERY_PARAM);
+		}
+		columnNames.add(AppConstant.REQUEST);
+		placeholders.add(AppConstant.QUERY_PARAM);
+		columnNames.add(AppConstant.REQUEST_STATUS);
+		placeholders.add(AppConstant.QUERY_PARAM);
+
+		String insertQuery = String.format(AppConstant.INSERT_QUERY, tableNameWithSuffix, columnNames, placeholders);
+
+		try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+
+			int paramIndex = setParameters(preparedStatement, fields, dataMap);
+			preparedStatement.setString(paramIndex++, request);
+			preparedStatement.setString(paramIndex, action);
+
+			int rowsAffected = preparedStatement.executeUpdate();
+			if (rowsAffected > 0 && beans != null) {
+				for (Bean bean : beans) {
+
+					List<Map<String, Object>> subBeanDataMap = (List<Map<String, Object>>) input
+							.get(AppConstant.BEAN_DATA);
+					if (subBeanDataMap != null) {
+						for (int i = 0; i < subBeanDataMap.size(); i++) {
+							Map<String, Object> beanMap = subBeanDataMap.get(i);
+							boolean result = addToHistBean(beanMap, bean, request, action, connection);
+							if (result) {
+								response = true;
+
+							}
+						}
+					}
+				}
+			} else if (rowsAffected > 0 && beans == null) {
+				response = true;
+
+			}
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.HIST_PROCESS_ERROR, e);
+			return response;
+
+		}
+		return response;
+
+	}
+
+	public boolean addToHistBean(Map<String, Object> input, Bean bean, String request, String action,
+			Connection connection) {
+		boolean response = false;
+		String tableName = bean.getEntityName();
+		List<Field> fields = bean.getFields();
+
+		String tableNameWithSuffix = tableName + AppConstant.HIST_TABLE_SUFFIX;
+		StringJoiner columnNames = new StringJoiner(AppConstant.COMMA);
+		StringJoiner placeholders = new StringJoiner(AppConstant.COMMA, AppConstant.OPEN_BRACKET,
+				AppConstant.CLOSE_BRACKET);
+		for (int i = 0; i < fields.size(); i++) {
+			Field field = fields.get(i);
+			columnNames.add(field.getName());
+			placeholders.add(AppConstant.QUERY_PARAM);
+		}
+		columnNames.add(AppConstant.REQUEST);
+		placeholders.add(AppConstant.QUERY_PARAM);
+		columnNames.add(AppConstant.REQUEST_STATUS);
+		placeholders.add(AppConstant.QUERY_PARAM);
+
+		String insertQuery = String.format(AppConstant.INSERT_QUERY, tableNameWithSuffix, columnNames, placeholders);
+
+		try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+
+			int paramIndex = setParameters(preparedStatement, fields, input);
+			preparedStatement.setString(paramIndex++, request);
+			preparedStatement.setString(paramIndex, action);
+
+			int rowsAffected = preparedStatement.executeUpdate();
+			if (rowsAffected > 0) {
+				response = true;
+			}
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.HIST_PROCESS_ERROR, e);
+			return response;
+
+		}
+		return response;
+
+	}
+
+	public List<Map<String, Object>> getById(String tableName, Map<String, Object> input, boolean isSubBean) {
+		List<Map<String, Object>> result = new ArrayList<>();
+
+		try {
+			String entity;
+			if (tableName.contains(AppConstant.TEMP_TABLE_SUFFIX)) {
+				entity = tableName.replaceAll(AppConstant.TEMP_TABLE1, AppConstant.EMPTY_STRING);
+			} else {
+				entity = tableName.replaceAll(AppConstant.MASTER_TABLE1, AppConstant.EMPTY_STRING);
+			}
+			List<String> primaryFields = isSubBean ? JsonToJavaConverter.getBeanPrimaryfields(entity)
+					: JsonToJavaConverter.getPrimaryfields(entity);
+			StringBuilder whereClause = new StringBuilder();
+			List<Object> parameterValuesList = new ArrayList<>();
+			for (String field : primaryFields) {
+				if (input.containsKey(field)) {
+					if (whereClause.length() > 0) {
+						whereClause.append(AppConstant.AND);
+					}
+					whereClause.append(field).append(AppConstant.EQUAL_QUERY_PARAM);
+					parameterValuesList.add(input.get(field));
+				}
+			}
+
+			if (!parameterValuesList.isEmpty()) {
+				String selectQuery = String.format(AppConstant.SELECT_QUERY1, tableName, whereClause);
+				Object[] parameterValues = parameterValuesList.toArray();
+				result = jdbcTemplate.queryForList(selectQuery, parameterValues);
+			} else {
+				Logging.error(AppConstant.NOT_PRIMARY_FIELD);
+			}
+
+		} catch (Exception e) {
+			Logging.error(AppConstant.GET_PROCESS_ERROR + tableName, e);
+			Map<String, Object> newData = new HashMap<>();
+			newData.put(AppConstant.COMMON_MODULE_ERROR, AppConstant.CHECK_EXISTING_DATA_ERROR);
+			result.add(newData);
+		}
+
+		return result;
+	}
+
+	@Override
+	public boolean doCUDOperations(Map<String, Object> input, Entity entity, String request) {
+		boolean response = false;
+		String tableName = entity.getEntityName() + AppConstant.TEMP_TABLE_SUFFIX;
+		List<Field> fields = entity.getFields();
+		String setClause = fields.stream().map(Field::getName).collect(Collectors.joining(AppConstant.COMMA));
+		setClause += AppConstant.COMMA + AppConstant.REQUEST + AppConstant.COMMA + AppConstant.STATUS;
+		String insertQuery = generateInsertQuery(tableName, setClause, fields.size() + 2);
+		if (AppConstant.ADD_ACTION.equalsIgnoreCase(request) || (AppConstant.UPDATE_ACTION.equalsIgnoreCase(request)
+				|| AppConstant.DELETE_ACTION.equalsIgnoreCase(request))) {
+			try (Connection connection = dataSource.getConnection();
+					PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+				connection.setAutoCommit(false);
+				int paramIndex = setParameters(preparedStatement, fields, input);
+				preparedStatement.setString(paramIndex++, request);
+				preparedStatement.setString(paramIndex, AppConstant.PENDING);
+				int result = preparedStatement.executeUpdate();
+
+				if (result > 0) {
+					connection.commit();
+					response = true;
+				} else {
+					connection.rollback();
+				}
+			} catch (Exception e) {
+				Logging.error(AppConstant.CUD_PROCESS_ERROR + request, e);
+				return response;
+			}
+		}
+		return response;
+
+	}
+
+	@Override
+	public boolean doCUDOperationForBean(Map<String, Object> parentBody, List<Map<String, Object>> beanData,
+			Module module, String request) {
+		boolean response = false;
+		String tableName = module.getEntityName() + AppConstant.TEMP_TABLE_SUFFIX;
+		List<Field> fields = module.getFields();
+		String setClause = fields.stream().map(Field::getName).collect(Collectors.joining(AppConstant.COMMA));
+		setClause += AppConstant.COMMA + AppConstant.REQUEST + AppConstant.COMMA + AppConstant.STATUS;
+		String insertQuery = generateInsertQuery(tableName, setClause, fields.size() + 2);
+		if (AppConstant.ADD_ACTION.equalsIgnoreCase(request) || (AppConstant.UPDATE_ACTION.equalsIgnoreCase(request)
+				|| AppConstant.DELETE_ACTION.equalsIgnoreCase(request))) {
+			try (Connection connection = dataSource.getConnection();
+					PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+				connection.setAutoCommit(false);
+				int paramIndex = setParameters(preparedStatement, fields, parentBody);
+				preparedStatement.setString(paramIndex++, request);
+				preparedStatement.setString(paramIndex, AppConstant.PENDING);
+				int result = preparedStatement.executeUpdate();
+				if (result > 0) {
+					for (Bean bean : module.getBeans()) {
+						if (!doCUDOperationForEntity(connection, beanData, bean, request)) {
+							response = false;
+							break;
+						}
+						response = true;
+					}
+				}
+
+				if (response) {
+					connection.commit();
+				} else {
+					connection.rollback();
+				}
+
+			} catch (Exception e) {
+				Logging.error(AppConstant.CUD_PROCESS_ERROR + request, e);
+			}
+		}
+		return response;
+	}
+
+	private boolean doCUDOperationForEntity(Connection connection, List<Map<String, Object>> entityData, Entity entity,
+			String request) throws SQLException {
+		boolean flag = false;
+		String tableName = entity.getEntityName() + AppConstant.TEMP_TABLE_SUFFIX;
+		List<Field> fields = entity.getFields();
+
+		String setClause = fields.stream().map(Field::getName).collect(Collectors.joining(AppConstant.COMMA));
+		setClause += AppConstant.COMMA + AppConstant.REQUEST + AppConstant.COMMA + AppConstant.STATUS;
+
+		String insertQuery = generateInsertQuery(tableName, setClause, fields.size() + 2);
+
+		try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+			for (Map<String, Object> entityBody : entityData) {
+				int paramIndex = setParameters(preparedStatement, fields, entityBody);
+				preparedStatement.setString(paramIndex++, request);
+				preparedStatement.setString(paramIndex, AppConstant.PENDING);
+
+				int result = preparedStatement.executeUpdate();
+
+				if (result > 0) {
+					flag = true;
+				} else {
+					flag = false;
+					break; // If any entity fails, break the loop
+				}
+			}
+		} catch (Exception e) {
+			Logging.error(AppConstant.CUD_PROCESS_ERROR + request, e);
+		}
+
+		return flag;
+	}
+
+	private String generateInsertQuery(String tableName, String setClause, int numParams) {
+		return AppConstant.INSERT + tableName + AppConstant.OPEN_BRACKET + setClause + AppConstant.VALUES
+				+ String.join(AppConstant.COMMA, Collections.nCopies(numParams, AppConstant.QUERY_PARAM))
+				+ AppConstant.CLOSE_BRACKET;
+	}
+
+}
